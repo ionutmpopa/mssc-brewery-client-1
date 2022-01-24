@@ -3,6 +3,7 @@ package guru.springframework.msscbreweryclient.web.client;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springframework.msscbreweryclient.web.model.CustomerDto;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,6 +31,7 @@ class CustomerClientTest {
         assertNotNull(dto);
     }
 
+    @Disabled
     @Test
     void testSaveNewCustomer() {
 
@@ -44,6 +46,7 @@ class CustomerClientTest {
     }
 
 
+    @Disabled
     @Test
     void testUpdateCustomer() {
         CustomerDto customerDto = CustomerDto.builder().id(UUID.randomUUID()).name("Ursus").build();

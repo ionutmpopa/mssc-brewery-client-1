@@ -3,6 +3,7 @@ package guru.springframework.msscbreweryclient.web.client;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springframework.msscbreweryclient.web.model.BeerDto;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,6 +31,7 @@ class BeerClientTest {
         assertNotNull(dto);
     }
 
+    @Disabled
     @Test
     void testSaveNewBeer() {
 
@@ -43,6 +45,7 @@ class BeerClientTest {
 
     }
 
+    @Disabled
     @Test
     void testSaveNewBeerPostForObject() {
         BeerDto beerDto = BeerDto.builder().id(UUID.randomUUID()).beerName("Ursus").beerStyle("PALE").upc(5L).build();
@@ -52,6 +55,7 @@ class BeerClientTest {
         log.info(beerDtoSaved.toString());
     }
 
+    @Disabled
     @Test
     void testUpdateBeer() {
         BeerDto beerDto = BeerDto.builder().id(UUID.randomUUID()).beerName("Ursus").beerStyle("PALE").upc(5L).build();
