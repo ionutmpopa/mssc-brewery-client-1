@@ -25,6 +25,7 @@ class CustomerClientTest {
     @Autowired
     ObjectMapper objectMapper;
 
+    @Disabled
     @Test
     void getCustomerById() {
         CustomerDto dto = customerClient.getCustomerById(UUID.randomUUID());
@@ -54,6 +55,7 @@ class CustomerClientTest {
 
     }
 
+    @Disabled
     @Test
     void testDeleteCustomer() {
         CustomerDto customerDto = CustomerDto.builder().id(UUID.randomUUID()).name("Ursus").build();
